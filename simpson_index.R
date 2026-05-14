@@ -18,6 +18,6 @@ simpson_index = function(sp_counts) {
   return(D) #returns the result
 }
 
-# The function calculates the Simpson;s Index by using a vector of species count. The input is a vector where each number is representative of one species' abundance. The function first calculates the number of individual (N), and then divides each species county by N to calculate overall abundance. It then squares the values and sums then to return Simpson's Index (D). The output is a single value between 0 and 1.
+# The function calculates the Simpson's Index by using a vector of species count. The input is a vector where each number is representative of one species' abundance. The function first calculates the number of individual (N), and then divides each species county by N to calculate overall abundance. It then squares the values and sums then to return Simpson's Index (D). The output is a single value between 0 and 1.
 
 
