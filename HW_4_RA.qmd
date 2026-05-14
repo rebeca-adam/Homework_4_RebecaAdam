@@ -1,0 +1,46 @@
+---
+title: "HW4_RA_SimpsonIndexTest"
+author: "Rebeca Adam"
+format: html
+editor: visual
+---
+
+### Inputs
+
+sp_counts = The number of species abundances in counts. Each value represents the number of observations per individual species
+
+### Outputs
+
+Returns a value between 0 and 1. Larger values are indicative of lower biodiversity. This is because a larger value means there is a greater probability that two of the randomly selected individuals are the same species.
+
+### Formula:
+
+D = sum((ni / N)\^2) ni = species abundance N = total abundance across all species
+
+### Description:
+
+The function calculates the Simpson;s Index by using a vector of species count. The input is a vector where each number is representative of one species' abundance. The function first calculates the number of individual (N), and then divides each species county by N to calculate overall abundance. It then squares the values and sums then to return Simpson's Index (D). The output is a single value between 0 and 1.
+
+## Test Simpson's Index Function
+
+```{r}
+# Species abundance data (randomly selected)
+species_counts = c(12, 8, 5, 3, 2)
+
+simpson_index(species_counts)
+```
+
+```{r}
+# Lots of abuncance
+example_1 = c(10, 10, 10, 10)
+
+# Less abundance
+example_2 = c(35, 2, 2, 1)
+
+simpson_index(example_1)
+simpson_index(example_2)
+```
+
+## Interpretation
+
+Simpson's Index values that are lower are indicative of greater biodiversity because individuals are more evenly distributed among species. The higher vales indicate lower biodiversity, with greater dominance by few or one species. This leads to less species abundance, in turn, less biodiverse communitites.
